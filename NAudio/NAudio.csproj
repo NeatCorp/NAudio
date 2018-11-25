@@ -273,36 +273,6 @@
     <Compile Include="FileFormats\SoundFont\StructureBuilder.cs" />
     <Compile Include="FileFormats\SoundFont\Zone.cs" />
     <Compile Include="FileFormats\SoundFont\ZoneBuilder.cs" />
-    <Compile Include="Gui\Fader.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Gui\PanSlider.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Gui\Pot.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Gui\Pot.designer.cs">
-      <DependentUpon>Pot.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gui\VolumeMeter.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Gui\VolumeMeter.Designer.cs">
-      <DependentUpon>VolumeMeter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gui\VolumeSlider.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Gui\WaveformPainter.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Gui\WaveformPainter.Designer.cs">
-      <DependentUpon>WaveformPainter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gui\WaveViewer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Midi\ChannelAfterTouchEvent.cs" />
     <Compile Include="Midi\ControlChangeEvent.cs" />
     <Compile Include="Midi\KeySignatureEvent.cs" />
@@ -352,12 +322,6 @@
     <Compile Include="Utils\HResult.cs" />
     <Compile Include="Utils\IgnoreDisposeStream.cs" />
     <Compile Include="Utils\MergeSort.cs" />
-    <Compile Include="Utils\ProgressLog.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Utils\ProgressLog.designer.cs">
-      <DependentUpon>ProgressLog.cs</DependentUpon>
-    </Compile>
     <Compile Include="CoreAudioApi\AudioEndpointVolume.cs" />
     <Compile Include="CoreAudioApi\AudioMeterInformation.cs" />
     <Compile Include="CoreAudioApi\DeviceState.cs" />
@@ -422,7 +386,6 @@
     <Compile Include="Wave\MmeInterop\WaveInterop.cs" />
     <Compile Include="Wave\MmeInterop\WaveOutCapabilities.cs" />
     <Compile Include="Wave\MmeInterop\WaveOutSupport.cs" />
-    <Compile Include="Wave\MmeInterop\WaveWindow.cs" />
     <Compile Include="Wave\SampleChunkConverters\ISampleChunkConverter.cs" />
     <Compile Include="Wave\SampleChunkConverters\Mono16SampleChunkConverter.cs" />
     <Compile Include="Wave\SampleChunkConverters\Mono24SampleChunkConverter.cs" />
@@ -535,32 +498,6 @@
     <Compile Include="Dmo\ResamplerMediaObject.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Gui\Fader.resx">
-      <DependentUpon>Fader.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\PanSlider.resx">
-      <DependentUpon>PanSlider.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\Pot.resx">
-      <DependentUpon>Pot.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\VolumeSlider.resx">
-      <DependentUpon>VolumeSlider.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\WaveViewer.resx">
-      <DependentUpon>WaveViewer.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Utils\ProgressLog.resx">
-      <DependentUpon>ProgressLog.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Changes.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -580,7 +517,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Gui\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
